@@ -8,12 +8,14 @@ class Record extends Component {
   render(){
     return(
       <Fragment>
-        Home
+        
       </Fragment>
     )
   }
 }
-mapStateToProps(state){
+const mapStateToProps = (state) =>{
+  return {
 
+  }
 }
 export default connet(mapStateToProps,mapDispatchToProps)(Record)

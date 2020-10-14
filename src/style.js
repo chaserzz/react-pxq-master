@@ -35,4 +35,7 @@ button{
   outline:none;
   border:none;
 }
+li{
+  list-style:none;
+}
 `
