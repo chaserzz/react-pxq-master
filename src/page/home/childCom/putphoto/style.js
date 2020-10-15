@@ -36,3 +36,12 @@ export const Input = styled.input.attrs({
   width:100%;
   opacity:0;
 `
+
+export const Image = styled.img`
+  width:50%;
+  margin-top:.3rem;
+  margin-left:25%;
+  &.hidden{
+    display:none;
+  }
+`

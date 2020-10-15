@@ -32,3 +32,7 @@ export const NavBarLeft = styled.div`
 export const NavBarRight = styled.div`
   padding: 0 .5rem;
 `
+export const Span = styled.span`
+  display:block;
+  padding: 0 .5rem;
+`
