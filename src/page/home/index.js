@@ -16,8 +16,9 @@ class Home extends Component {
   constructor(props){
     super(props)
     this.state = {
-      showAlert :false, //警告组件是否显示
-      AlertContent:''  //警告组件内容
+      showAlert : false, //警告组件是否显示
+      AlertContent : '',  //警告组件内容
+      Productlist : [] //产品组件  
     }
     this.handleNameInput = this.handleNameInput.bind(this)
     this.handlePriceInput = this.handlePriceInput.bind(this)
@@ -26,7 +27,9 @@ class Home extends Component {
     this.hiddenAlert = this.hiddenAlert.bind(this)
     this.confirmInfo = this.confirmInfo.bind(this)
   }
-
+  componentDidUpdate(){
+    
+  }
   render(){
     return (
       <Fragment>
@@ -39,7 +42,9 @@ class Home extends Component {
       handlePriceChange = {this.handlePriceInput}  //处理金额的Input框的输入
       handlePhoneChange = {this.handlePhoneInput}  //处理客户电话的Input框的输入
       />
-      <ChoseProduct />
+      <ChoseProduct 
+      list={this.props.products}
+      />
       <PutPhoto 
       handleInputImg={this.handleUpLoadImg} 
       url = {this.props.imageUrl}/>
@@ -133,7 +138,8 @@ const mapStateToProps = (state) =>{
     price:state.home.price,  //金额
     name:state.home.name,    //客户名字
     phone:state.home.phone,   //客户号码
-    imageUrl:state.home.url
+    imageUrl:state.home.url,  //图片url
+    products:state.product.currentProducts //产品数组
   }
 }
 const mapDispathToProps = (dispatch) =>{

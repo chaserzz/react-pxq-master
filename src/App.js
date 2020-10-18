@@ -1,10 +1,11 @@
 import React from 'react'
 import store from './store'
 import {Provider} from 'react-redux'
-import { HashRouter, Route, } from 'react-router-dom'
+import { HashRouter, Redirect, Route, Switch } from 'react-router-dom'
 //全局样式引入
 import {Globalstyle} from './style'
 
+import Product from './page/product'
 import Home from './page/home'
 import Balance from './page/balance'
 import HelpCenter from './page/helpCenter'
@@ -14,12 +15,16 @@ function App() {
     <div className="App">
       <Provider store = {store}>
         <Globalstyle />
-          <HashRouter>
+        <HashRouter >
+          <Switch>
             <Route path='/home' component={Home} />
             <Route path='/balance' component={Balance} />
             <Route path='/help' component={HelpCenter} />
             <Route path='/record' component={Record} />
-          </HashRouter>
+            <Route path='/product' component={Product} />
+            <Redirect path='/' to='/home' />
+          </Switch>
+        </HashRouter>
       </Provider>
     </div>
   );

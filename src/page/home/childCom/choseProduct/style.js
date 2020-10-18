@@ -10,15 +10,33 @@ export const Title = styled.p`
   font-size:0.98rem;
 `
 export const A = styled.a.attrs({
-  href:'/'
+  href:'/#/product'
 })`
-  display:block;
+  display:flex;
   width:100%;
-  height:4rem;
   background-color:#fff;
+  align-items:center;
+  flex-wrap: wrap;
+  justify-content:space-between;
   color:#ccc;
   text-align:center;
+
   font-size:1.1rem;
-  line-height:4rem;
   -webkit-tap-highlight-color:rgba(0,0,0,0);
+`
+
+export const Span = styled.span`
+  flex:1;
+  line-height:4rem;
+`
+
+export const ProductItem = styled.span`
+  display:block;
+  flex:1;
+  width:40%;
+  padding:.5rem 9%;
+  font-size:.8rem;
+  color:#333;
+  text-align:center;
+  white-space:nowrap;
 `

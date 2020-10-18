@@ -1,0 +1,5 @@
+export const INIT_LIST = 'init_list'
+export const ADD_NUM = 'add_num'
+export const SUB_NUM = 'sub_num'
+export const CHANGE_STATUS = 'change_status'
+export const SAVE_LIST = 'save_list'

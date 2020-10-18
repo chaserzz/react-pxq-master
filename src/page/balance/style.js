@@ -22,20 +22,22 @@ export const BalanceWrapper = styled.section`
 `
 
 export const BalanceTitle = styled.p.attrs({
-  children:"请输入提现金额(元)"
+  children:"请输入提现金额  (元)"
 })`
   font-size:1rem;  
 `
-export const InputWaraper = styled.p`
+export const InputWaraper = styled.div`
     padding:.6rem 0 ;
 `
 
 
 export const BalanceInput = styled.input.attrs({
-  placeholder:'0.00'
+  placeholder:'0.00',
+  max:"4",
 })`
   width:3.4rem;
   font-size:1rem;
+  margin-top:.8rem;
   ::placeholder{
     color:#ccc;  
   }

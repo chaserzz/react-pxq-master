@@ -1,4 +1,3 @@
-import { Switch } from 'react-router-dom'
 import { INPUT_PRICE , INPUT_NAME , INPUT_PHONE , UPLOAD_IMG , CLEAR_DATA } from './constants'
 
 const defaultState = {
